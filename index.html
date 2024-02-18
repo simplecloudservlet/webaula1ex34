@@ -1,0 +1,132 @@
+<!-- TODO1: jQuery: Altere o primeiro e o último marcador <h3> da árvore DOM -->
+<!-- TODO2: jQuery: Ordene os elementos de uma lista-->
+<!-- TODO3: jQuery: Mude a cor do marcador <h3> que eh filho do marcador <div3> -->
+<!-- TODO4: jQuery: Mude a cor do marcador <div> -->
+<!-- TODO5: jQuery: Altere o tamanho da fonte do segundo marcador <h3> do marcador <div id="div1"> -->
+
+<!DOCTYPE html>
+<html lang="bzs">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Comércio Eletrônico</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+
+	<!-- TODO1 -->
+	<!-- A ordem aqui eh importante: primeiro deve vir o 'jquery.js', depois scripts.js, porque este último utiliza 'jquery.js'-->
+	<script src="js/jquery-3.7.1.js"></script>
+	<script src="js/decimal.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+
+<body>
+
+	<!-- TODO1 -->
+	<div id="div1">
+		<h3>Comércio Eletrônico</h3>
+		<h3>Comércio Eletrônico</h3>
+		<h3>Comércio Eletrônico</h3>
+		<button id="btn1">TODO1a: Alterar primeiro marcador '&lt;h3&gt;'</button>
+		<button id="btn2">TODO1b: Alterar ultimo marcador '&lt;h3&gt;'</button>
+		<br>
+		<br>
+	</div>
+
+	<!-- TODO2 -->
+	<div id="div2">
+		<ul id="lista1">
+			<li>Caderno</li>
+			<li>Apagador</li>
+			<li>Borracha</li>
+			<li>Estojo</li>
+			<li>Decoração</li>
+		</ul>
+		<button id="btn3">TODO2: Ordenar</button>
+		<br>
+		<br>
+	</div>
+
+	<!-- TODO3 -->
+	<div id="div3">
+		<h1>Comércio Eletrônico</h3>
+			<h3>Comércio Eletrônico</h3>
+			<h2>Comércio Eletrônico</h3>
+				<button id="btn4">TODO3: Alterar marcador '&lt;h3&gt;'</button>
+
+				<br>
+				<br>
+	</div>
+
+	<!-- TODO4 -->
+	<div id="div4">
+		<button id="btn5">TODO4: Alterar marcador '&lt;div&gt;'</button>
+		<br>
+		<br>
+	</div>
+
+	<!-- TODO5 -->
+	<div id="div5">
+		<button id="btn6">TODO6: Alterar fonte '&lt;h3&gt;' do '&lt;div id="div1"&gt;'</button>
+		<br>
+		<br>
+	</div>
+
+	<!-- -->
+	<button onclick="exibirOcultar()">Exibir/Ocultar tabela</button>
+	<table id="tabelaProduto">
+		<tr>
+			<td>Produto:</td>
+			<td><input id="nome" type="text" class="input1"></input></td>
+			<!-- class: indica a formatacao CSS de classe -->
+		</tr>
+		<tr>
+			<td>Vendedor:</td>
+			<td><input id="vendedor" type="text" class="input1"></input></td>
+		</tr>
+		<tr>
+			<td>Endereço de entrega:</td>
+			<td><input id="enderecoEntrega" type="text" class="input1"></input></td>
+		</tr>
+	</table>
+
+
+	<img id='carrinho' src='img/vendas.png' width='100' height='50' data-desc-img='vendas'>
+	<label id="legenda" class="estiloAvaliacao">Descrição da Imagem</label>
+
+	<div>
+		<label id="tamanhoTexto">Letras</label>
+	</div>
+
+	<div>
+		<textarea id="caixaTexto" cols="100" rows="3" placeholder="Digite o texto..."></textarea>
+	</div>
+
+
+	<label id="rotuloAvaliacao" class="estiloAvaliacao">Avaliação da Compra</label>
+	<br>
+
+	<!-- <label id="rotuloAvaliacao">Avaliação da Compra</label>
+	-->
+
+	<select id="notas" name="notasJS" onchange="avaliarCompra()">
+		<option value="0">0</option>
+		<option value="5">5</option>
+		<option value="10">10</option>
+	</select>
+
+	<figure>
+		<img id='carrinho' src='img/vendas.png' width='100' height='50' alt='vendas'>
+		<figcaption>
+			<p>Comércio Eletrônico.</p>
+		</figcaption>
+	</figure>
+
+
+	<button onclick="comprar()">Efetuar compra</button>
+
+</body>
+
+</html>
